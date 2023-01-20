@@ -32,26 +32,26 @@ body{
 }
 
 body *{
-    font-family: 'Inter', sans-serif;
     color: var(--text-color);
+    font-family: 'Inter', sans-serif;
 }
 
 #container{
-    width: 100%;
-    max-width: 588px;
     margin: 56px auto 0px;
+    max-width: 588px;
     padding: 0 24px;
+    width: 100%;
 }
 
 #profile{
-    text-align: center;
     padding: 24px;
+    text-align: center;
 }
 
 #profile img{
-    width: 112px;
-    border: 2px solid whitesmoke;
+    border: 2px solid var(--stroke-color);
     border-radius: 50%;
+    width: 112px;
 }
 
 #profile p{
@@ -62,23 +62,23 @@ body *{
 
 
 #switch{
+    margin: 4px auto;
     position: relative;
     width: 64px;
 
-    margin: 4px auto;
 }
 
 #switch button{
-    width: 32px;
-    height: 32px;
     background: var(--switch-bg-url) no-repeat center white;
     border: 0;
     border-radius: 50%;
+    height: 32px;
+    left: 0;
     position: absolute;
     top: 50%;
-    left: 0;
-    z-index: 1;
     transform: translateY(-50%);
+    width: 32px;
+    z-index: 1;
 }
 
 #switch button:hover{
@@ -86,18 +86,18 @@ body *{
 }
 
 #switch span{
-    display: block;
-    width: 64px;
-    height: 24px;
     background: var(--surface-color);
-    border: 1px solid var(--stroke-color);
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid var(--stroke-color);
     border-radius: 50px;
+    display: block;
+    height: 24px;
+    width: 64px;
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .light #switch button {
-    animation: slide-in .2s forwards;
+    animation: slide-in 0.2s forwards;
 }
 
 ul{
@@ -107,26 +107,23 @@ ul{
     flex-direction: column;
     gap: 10px;
 
-    padding: 24px;
+    padding: 25px;
 }
 
 ul li a{
-    display: flex;
     align-items: center;
-    justify-content: center;
-
-    padding: 16px 24px;
     background: var(--surface-color);
+    backdrop-filter: blur(4px);
     border: 1px solid var(--stroke-color);
     border-radius: 8px;
-
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-
-    text-decoration: none;
+    display: flex;
     font-weight: 500;
-
+    justify-content: center;
+    padding: 16px 24px;
+    text-decoration: none;
     transition: background .2s;
+    -webkit-backdrop-filter: blur(4px);
+    
 }
 
 ul li a:hover {
@@ -159,9 +156,18 @@ footer{
 
 @keyframes slide-back{
  from {
-    left: 0;
- }
- to{
     left: 50%;
  }
+ to{
+    left: 0;
+ }
+}
+
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
 }
